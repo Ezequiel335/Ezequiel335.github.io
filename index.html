@@ -234,9 +234,9 @@ function cambiarIdioma(esIngles) {
     var currentUrl = window.location.href;
     var newUrl;
     if (esIngles) {
-        newUrl = currentUrl.replace('/index.html', '/index_en.html');
+        newUrl = currentUrl.replace('/main/index.html', '/main/index_en.html');
     } else {
-        newUrl = currentUrl.replace('/index_en.html', '/index.html');
+        newUrl = currentUrl.replace('/main/index_en.html', '/main/index.html');
     }
 
     setTimeout(function() {
@@ -249,7 +249,7 @@ var switcherToggle = document.getElementById('switcher-toggle');
 var switcherTextEn = document.querySelector('.switcher-text--en');
 
 // Verificar si la ruta contiene "CV_ER_EN.html" y marcar el interruptor
-if (window.location.pathname.includes('index_en.html')) {
+if (window.location.pathname.includes('/main/index_en.html')) {
     switcherToggle.checked = true;
     switcherTextEn.classList.add('active');
 } else {
